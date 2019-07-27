@@ -1,0 +1,80 @@
+<form [formGroup]="stateForm">
+  <mat-form-field>
+    <input type="text" matInput placeholder="Find Products" formControlName="stateGroup" required [matAutocomplete]="autoGroup">
+      <mat-autocomplete #autoGroup="matAutocomplete">
+        <mat-optgroup *ngFor="let group of stateGroupOptions | async" [label]="group.letter">
+          <mat-option *ngFor="let name of group.names" [value]="name">
+            {{name}}
+          </mat-option>
+      </mat-optgroup>
+    </mat-autocomplete>
+  </mat-form-field>
+
+  
+  	<button   [routerLink]="['/select-catgory']" (click)="acceptOrder()" class="btn btn-primary">Import Product
+      </button>
+    
+        <br>
+      
+
+  <div class="form-group">
+        <label for="username">Product Name</label>
+        <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+        <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+            <div *ngIf="f.username.errors.required">Username is required</div>
+        </div>
+    </div>
+ <div class="form-group">
+        <label for="username">Selling Price</label>
+        <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" />
+        <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
+            <div *ngIf="f.username.errors.required">Product Name is required</div>
+        </div>
+    </div>
+
+
+ <div class="form-group">
+        <label for="password">Product Catagory:</label>
+<mat-form-field class="example-user-input">
+  <mat-select placeholder="Tooltip position" [formControl]="position">
+    <mat-option *ngFor="let positionOption of positionOptions" [value]="positionOption">
+      {{positionOption}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+ </div>
+
+
+
+  <div class="form-group">
+        <label for="password">No Of Units</label>
+
+<mat-form-field class="example-user-input">
+  <mat-select placeholder="Tooltip position" [formControl]="position">
+    <mat-option *ngFor="let positionOption of positionOptions" [value]="positionOption">
+      {{positionOption}}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+ </div>
+
+
+
+    <div class="form-group">
+        <label for="password">MRP</label>
+        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" />
+        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
+            <div *ngIf="f.password.errors.required">MRP is required</div>
+        </div>
+    </div>
+    <div >
+        
+        <button class="form-group" mat-button class="btn btn-primary">Submit</button>
+     
+    </div>
+
+
+
+
+
+</form>

@@ -1,0 +1,24 @@
+<div class="card" >
+  <div class="card-header">
+    <h4>Completed Order: {{count}}</h4>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item" *ngFor="let orderItem of orderItems" >
+    <!-- <app-order [order]="orderItem"> </app-order> -->
+
+    		<div class="container">
+				<div class="row">
+
+					<div class="col-sm-2"> {{orderItem.order_id}}</div>
+
+
+					<div class="col-sm-2"> {{orderItem.order_status}}</div>
+
+				</div>
+
+			</div>
+
+
+  </li> 
+  </ul>
+</div>

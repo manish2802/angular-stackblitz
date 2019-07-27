@@ -1,0 +1,16 @@
+<mat-selection-list #shoes>
+  <mat-list-option *ngFor="let shoe of typesOfShoes" >
+    {{shoe}}
+  </mat-list-option>
+</mat-selection-list>
+ 
+
+<p>
+  Options selected: {{shoes.selectedOptions.selected.length}}
+  
+  Options selected: {{shoes.selectedOptions.textContent}}             
+</p>
+
+
+<button class="form-group" mat-button class="btn btn-primary" (click)="addCatagory(shoes)">Submit</button>
+   

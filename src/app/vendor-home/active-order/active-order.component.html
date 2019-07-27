@@ -1,0 +1,32 @@
+<div class="card">
+	<div class="card-header">
+		<h4>Active Order: {{count}}</h4>
+	</div>
+
+	<ul class="list-group list-group-flush">
+		<li class="list-group-item" *ngFor="let orderItem of orderItems">
+
+			<div class="container">
+				<div class="row">
+
+					<div class="col-sm-2"> {{orderItem.order_id}}</div>
+
+
+					<div class="col-sm-2"> {{orderItem.order_status}}</div>
+
+          <div class="col-sm-2"> {{'Pickup OTP: ' + 123}}</div>
+
+
+				
+
+				</div>
+
+			</div>
+
+
+
+
+
+</li>
+</ul>
+</div>

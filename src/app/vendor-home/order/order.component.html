@@ -1,0 +1,30 @@
+<div class="container">
+	<div class="row">
+
+   
+		<!-- <div class="col-sm-2"> {{order.order_id}}</div> -->
+
+     <div class="col-sm-2"><a [routerLink]="['/order-item']" class="btn btn-link">{{order.order_id}}</a></div>
+
+		<div class="col-sm-2"> {{order.order_status}}</div>
+                          
+
+		<div class="col-sm-8">
+			<div class="row">
+
+				<div class="col-sm-2">
+					<button  *ngIf="true"  (click)="acceptOrder(order)" class="btn btn-primary">Accept
+      </button>
+     
+      	</div>
+
+      	<div class="col-sm-2" >
+      <button  *ngIf="true"  (click)="rejectProduct(order)" class="btn btn-primary">Reject
+       </button>
+      	</div>
+    </div>
+
+    </div>
+
+    </div>
+</div>
